@@ -1,2 +1,323 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<nav class="carousel" id="Inicio">
+    <div class="row">
+        <div class="col">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/carousel01.png" width="1300px" height="400x" class="carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel02.jpg" width="1300px" height="400x" class="carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel03.jpg" width="1300px" height="400x" class="carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel04.jpg" width="1300px" height="400x" class="carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel05.jpg" width="1300px" height="400x" class="carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carousel06.webp" width="1300px" height="400x" class="carousel-img" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+</nav>
+<div class="row my-3">
+
+    <div id="novedades" class="col-md-5 offset-md-2 py-3">
+
+        <h2 class="tt"><strong>Novedades</strong></h2>
+{{#each novedades}}
+        <ul class="lista-novedades">
+
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal{{id}}">
+                 {{titulo}}</a></li>
+{{/each}}
+        </ul>
+
+    </div><!--cierra novedades --><!--inicio modal -->
+
+    {{#each novedades}}
+   <div class="modal" id="exampleModal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body negro">
+                    <h3>{{subtitulo}}</h3>
+                    <p>{{cuerpo}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+
+    <div class="row" id="Productos">
+        <h2 class="text-center">Productos</h2>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano1.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Tuli Negro </h2>
+                    <h3>$36.100</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/zapatosrojos.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Charol Rojo</h2>
+                    <h3>$40.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Gail Hielo</h2>
+                    <h3>$40.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/vestir4.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Maya Glitter Negro</h2>
+                    <h3>$28.500</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Kay Beige </h2>
+                    <h3>$17.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/vestir1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Charol Nude</h2>
+                    <h3>$35.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano4.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Lara Blanco</h2>
+                    <h3>$18.200</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/vestir5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">M&A</h2>
+                    <h3>$28.500</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row" id="Urbano">
+        <h2 class="text-center">Urbano</h2>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano1.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Tuli Negro </h2>
+                    <h3>$36.100</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Kay Beige</h2>
+                    <h3>$17.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Gail Hielo</h2>
+                    <h3>$40.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/urbano4.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Lara Blanco</h2>
+                    <h3>$18.200</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row" id="Vestir">
+        <h2 class="text-center">Vestir</h2>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/vestir1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Charol Nude </h2>
+                    <h3>$35.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/vestir4.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Maya Glitter Negro</h2>
+                    <h3>$28.500</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/zapatosrojos.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Charol Rojo</h2>
+                    <h3>$40.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/vestir5.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">M&A Hielo</h2>
+                    <h3>$38.000</h3>
+                    <button type="button" class="btn btn-outline-success  btn-sm">Comprar ahora</button>
+                    <button type="button" class="btn btn-outline-warning btn-sm">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="Visitanos" class="col">
+        <div class="mapa">
+            <h2>Visitanos</h2>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.210053538601!2d-58.42269182511443!3d-34.59884955723966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca7cd54f107b%3A0x88bd8fe0e0b6e3a6!2sCentro%20de%20e-Learning%20UTN%20BA!5e0!3m2!1ses-419!2sar!4v1692653109453!5m2!1ses-419!2sar"
+                style="border:0;" allowfullscreen="" loading="lazy" width="600" height="450"></iframe>
+
+
+        </div>
+
+    </div>
+    <div class="col-md-4 mt-4 mt-sm-0">
+        <h2>Contáctanos </h2>
+
+        <form id="Contacto" class="row g-3" action="/" method="post">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+            </div>
+
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="email@ejemplo.com">
+            </div>
+
+            <div class="col-12">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="...">
+            </div>
+
+            <div class="col-12">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn  btn-outline-success">Enviar</button>
+            </div>
+            <p>{{message}}</p>
+        </form>
+    </div>
+
+</div>
+
+</div>
+
+</div>

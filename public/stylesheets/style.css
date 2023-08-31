@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +9,37 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+h2 {
+  font-family: lora, serif;
+  color: black;
+}
+
+h3 {
+  font-family: lora, serif;
+  color: black;
+}
+
+.scroll_section {
+  scroll-margin-top: 60px;
+}
+
+.carousel {
+  width: 1300px;
+  height: 400px;
+  justify-content: center;
+  padding-right: 3%;
+  padding-left: 2%;
+}
+
+.card-img-top {
+  width: 300px;
+  height: 300px;
+}
+
+.modal {
+  width: 1300px;
+  height: 400px;
+  background-color: black;
 }
